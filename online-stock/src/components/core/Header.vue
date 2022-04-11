@@ -12,8 +12,8 @@
       <v-toolbar-title>Ohmaaagoch V {{version}}</v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <span>Username</span>
-      <v-btn icon>
+      <span>{{$store.getters['username']}}</span>
+      <v-btn icon @click="onClickLogOut">
         <v-icon>mdi-export</v-icon>
       </v-btn>
 
@@ -30,6 +30,11 @@ export default {
   computed: {
     version (){
       return "1.0"
+    }
+  },
+  methods: {
+    onClickLogOut(){
+      this.$store.dispatch('doLogout')
     }
   },
 }

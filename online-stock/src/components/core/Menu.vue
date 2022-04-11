@@ -10,6 +10,7 @@
           v-for="([icon, title, route], index) in menus"
           :key="index"
           link
+          
          
         >
           <v-list-item-icon>

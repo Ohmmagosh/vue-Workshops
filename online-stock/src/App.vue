@@ -16,7 +16,10 @@ export default {
     Header,
     Menu,
     Content
-  }
+  },
+  mounted() {
+    this.$store.dispatch({ type : "restoreLogin"});
+  },
 }
 </script>
 
